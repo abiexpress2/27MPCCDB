@@ -48,7 +48,7 @@ jobs:
             echo "No Actions are running or queued."
             echo "Triggering main.yml in THIS repository..."
 
-            GH_TOKEN="${{ secrets.TGT }}" \
+            GH_TOKEN="${{ secrets.GH_PAT }}" \
             gh workflow run main.yml \
               --repo "${{ github.repository }}" \
               --ref main
